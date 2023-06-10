@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#79A4B1"
+        android:theme="@style/Theme.Kanban.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/textTituloQuadro"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#79A4B1"
+            android:fontFamily="@font/suez_one"
+            android:gravity="center"
+            android:text="KANBAN"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_marginTop="68dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout">
+
+        <com.google.android.material.tabs.TabLayout
+            android:background="#D079A4B1"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorColor="@color/black"
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="#78A3B0"
+        app:fabSize="normal"
+        app:rippleColor="#FFFFFF"
+        android:text="Tarefa"
+        android:textStyle="bold"
+        app:icon="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="#78A3B0"
+        app:fabSize="normal"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
